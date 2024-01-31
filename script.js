@@ -25,7 +25,7 @@ const createCard = async () => {
   const modifiedCoins = await fetchTop20coins();
   console.log(modifiedCoins);
 
-  const sortedModifiedCoins = modifiedCoins.sort((a, b) => {
+  const sortedModifiedCoins = [...modifiedCoins].sort((a, b) => {
     const nameA = a.id.toUpperCase();
     const nameB = b.id.toUpperCase();
     if (nameA < nameB) {
